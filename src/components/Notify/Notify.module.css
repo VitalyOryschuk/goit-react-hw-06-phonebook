@@ -1,8 +1,11 @@
 .title {
+  position: absolute;
+  top: 10%;
+  left: 25%;
   margin: 0 auto;
   padding: 5px;
   width: 50%;
-  background: rgb(238, 138, 138);
+  background: goldenrod;
   text-transform: uppercase;
   color: purple;
   border-radius: 5px;
