@@ -2,8 +2,8 @@ export function saveToLS(state) {
   try {
     const existedData = JSON.stringify(state);
     localStorage.setItem('state', existedData);
-  } catch (err) {
-    return err;
+  } catch {
+    alert('Error');
   }
 }
 
@@ -12,7 +12,7 @@ export function loadStateFromLS() {
     const loadState = localStorage.getItem('state');
 
     if (loadState === null) {
-      return null;
+      return undefined;
     }
 
     return JSON.parse(loadState);
