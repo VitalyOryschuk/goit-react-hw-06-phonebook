@@ -17,6 +17,6 @@ export function loadStateFromLS() {
 
     return JSON.parse(loadState);
   } catch (err) {
-    return err;
+    return undefined;
   }
 }
