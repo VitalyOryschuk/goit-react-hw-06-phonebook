@@ -13,8 +13,12 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 import rootReducer from './rootReducer';
+import { saveToLS, loadStateFromLS } from '../services/LS';
 
-const store = configureStore({ reducer: rootReducer });
-console.log(store);
+const persistedState = loadStateFromLS();
+
+const store = configureStore({ reducer: rootReducer, preloadedState: persistedState });
+store.subscribe(() => saveToLS(store.getState()));
+// console.log(store);
 
 export default store;

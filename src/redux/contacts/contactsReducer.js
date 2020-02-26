@@ -1,6 +1,6 @@
 // toolkit;
 import { createReducer } from '@reduxjs/toolkit';
-import * as types from './contactsAppTypes';
+import * as types from './contactsTypes';
 
 const initial = {
   contacts: [],
@@ -9,17 +9,12 @@ const initial = {
 export const contactReducer = createReducer(initial, {
   [types.ADD_CONTACT]: (state, action) => {
     const addContact = [action.payload, ...state.contacts];
-    localStorage.setItem('contacts', JSON.stringify(addContact));
     return { ...state, contacts: addContact };
   },
   [types.REMOVE_CONTACT]: (state, action) => {
     const removeContact = state.contacts.filter(el => el.id !== action.payload);
-    localStorage.setItem('contacts', JSON.stringify(removeContact));
     return { ...state, contacts: removeContact };
   },
-  [types.SET_TO_LOCAL_STORAGE]: (state, action) => ({
-    contacts: action.payload,
-  }),
 });
 
 export const notifyReducer = createReducer('', {

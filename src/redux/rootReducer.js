@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import * as reducer from './contactsApp/contactsAppReducer';
+import * as reducer from './contacts/contactsReducer';
 import filterReducer from './filter/filterReducer';
 
 const rootReducer = combineReducers({

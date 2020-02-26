@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import * as contactActions from '../../redux/contactsApp/contactsAction';
+import * as contactActions from '../../redux/contacts/contactsAction';
 import * as selectors from '../../redux/selectors';
 import ContactsList from './ContactsList';
 

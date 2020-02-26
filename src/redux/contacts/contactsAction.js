@@ -1,6 +1,6 @@
 // toolkit
 import { createAction } from '@reduxjs/toolkit';
-import * as types from './contactsAppTypes';
+import * as types from './contactsTypes';
 
 export const addContactAction = createAction(types.ADD_CONTACT);
 export const removeContactAction = createAction(types.REMOVE_CONTACT);
