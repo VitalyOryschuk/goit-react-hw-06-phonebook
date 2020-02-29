@@ -8,12 +8,10 @@ const initial = {
 
 export const contactReducer = createReducer(initial, {
   [types.ADD_CONTACT]: (state, action) => {
-    const addContact = [action.payload, ...state.contacts];
-    return { ...state, contacts: addContact };
+    return { ...state, contacts: [action.payload, ...state.contacts] };
   },
-  [types.REMOVE_CONTACT]: (state, action) => {
-    const removeContact = state.contacts.filter(el => el.id !== action.payload);
-    return { ...state, contacts: removeContact };
+  [types.DELETE_CONTACT]: (state, action) => {
+    return { ...state, contacts: state.contacts.filter(el => el.id !== action.payload) };
   },
 });
 

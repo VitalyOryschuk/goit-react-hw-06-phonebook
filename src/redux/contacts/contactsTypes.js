@@ -1,4 +1,4 @@
-export const ADD_CONTACT = 'contactApp/ADD_CONTACT';
-export const REMOVE_CONTACT = 'contactApp/REMOVE_CONTACT';
-export const SET_TO_LOCAL_STORAGE = 'contactApp/SET_TO_LOCAL_STORAGE';
-export const SHOW_NOTIFY = 'contactApp/SHOW_NOTIFY';
+export const ADD_CONTACT = 'contact/ADD_CONTACT';
+export const DELETE_CONTACT = 'contact/DELETE_CONTACT';
+export const SET_TO_LOCAL_STORAGE = 'contact/SET_TO_LOCAL_STORAGE';
+export const SHOW_NOTIFY = 'contact/SHOW_NOTIFY';

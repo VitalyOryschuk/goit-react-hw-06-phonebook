@@ -3,7 +3,7 @@ import { createAction } from '@reduxjs/toolkit';
 import * as types from './contactsTypes';
 
 export const addContactAction = createAction(types.ADD_CONTACT);
-export const removeContactAction = createAction(types.REMOVE_CONTACT);
+export const removeContactAction = createAction(types.DELETE_CONTACT);
 export const setContactsToLocalStorage = createAction(types.SET_TO_LOCAL_STORAGE);
 export const showNotify = createAction(types.SHOW_NOTIFY);
 

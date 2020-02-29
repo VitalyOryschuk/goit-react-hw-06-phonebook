@@ -19,6 +19,5 @@ const persistedState = loadStateFromLS();
 
 const store = configureStore({ reducer: rootReducer, preloadedState: persistedState });
 store.subscribe(() => saveToLS(store.getState()));
-// console.log(store);
 
 export default store;
